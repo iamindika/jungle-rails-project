@@ -1,0 +1,17 @@
+<article class="line_items">
+  <header>
+    <%= link_to order do %>
+      <% line_items = LineItem.where(order_id: order.id) %>
+      <% line_items.each do |line_item| %>
+        <section class="line_item_details">
+          <% product = Product.find(line_item.product_id) %>
+          <p>Product Image: <%= product.image %></p>
+          <p>Product Name: <%= product.name %></p>
+          <p>Product Description: <%= product.description %></p> 
+          <p>Product Id: <%= product.id %><p>
+          <p>Quantity: <%= line_item.quantity %></p>
+          <p>Total Price of Product: <%= line_item.total_price_cents %></p>
+        </section>
+      <% end %>
+    <% end %>
+</article>
