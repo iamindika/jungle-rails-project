@@ -1,6 +1,11 @@
 class CartsController < ApplicationController
 
   def show
+    puts "ORDERS DOES NOT EXIST?: #{Order.first.nil?}"
+    puts "ORDERS: #{Order.all.to_a}"
+    # if Order.all.size == 1
+    #   redirect_to root_path, notice: 'No items in cart!'
+    # end
   end
 
   def add_item
@@ -24,5 +29,4 @@ class CartsController < ApplicationController
     cart.delete(product_id) if cart[product_id] < 1
     update_cart cart
   end
-
 end
