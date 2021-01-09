@@ -51,6 +51,18 @@ main section.categories-show {
         font-size: 0.8em;
       }
 
+      aside.alert {
+        position: absolute;
+        top: 0;
+        left: 0;
+        padding: 10px;
+        background-color: rgba(224, 30, 30, 0.5);
+        border-top-left-radius: 4px;
+        border-bottom-right-radius: 20px;
+        font-size: 0.8em;
+        color: white;
+      }
+
       &:hover {
 
         border-color: #999;
@@ -70,6 +82,18 @@ main section.products-show {
     img.main-img {
       max-width: 100%;
     }
+  }
+
+  aside.alert {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 10px;
+    background-color: rgb(224, 30, 30);
+    border-top-left-radius: 4px;
+    border-bottom-right-radius: 20px;
+    font-size: 0.8em;
+    color: white;
   }
 }
 
