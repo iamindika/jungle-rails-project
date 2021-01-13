@@ -13,7 +13,7 @@ class Admin::CategoriesController < ApplicationController
     if @category.save
       redirect_to [:admin, :categories], notice: 'Category created!'
     else
-      render :new
+      redirect_to [:admin, :categories], flash: { error: @category.errors.full_messages.first }
     end
   end
 
